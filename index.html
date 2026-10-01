@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Alojamieno para vacaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="img/logo1_modificado.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 320px 768px 1024px -->
+    <!-- sm:640px md:768px lg:1024px xl:1280px 2xl:1536px -->
+    
+    <!-- Navbar -->
+    <div class="w-full flex px-16 py-5 text-sm items-center justify-center">
+        <div class="w-1/6 justify-start">
+            <img src="img/logo2_modificado.png" alt="">
+        </div>
+        <nav class="w-3/6">
+            <ul class="flex justify-center">
+                <li><button class="border rounded-full border-0 hover:bg-stone-100 px-3 py-3 focus:font-bold">Estancias</button></li>
+                <li><button class="border rounded-full border-0 hover:bg-stone-100 px-3 py-3 focus:font-bold">Experiencias</button></li>
+                <li><button class="border rounded-full border-0 hover:bg-stone-100 px-3 py-3 focus:font-bold">Experiencias en linea</button></li></li>
+            </ul>
+        </nav>
+        <div class="w-2/6 flex justify-end space-x-2.5">
+            <a href="#" class="font-bold border rounded-full border-0 hover:bg-stone-100 px-3 py-3">Pon tu casa en  Airbnb</a>
+            <i class="fa-solid fa-globe border rounded-full border-0 hover:bg-stone-100 px-3 py-3"></i>
+            <div class="border border-stone-300 rounded-full px-4 flex items-center justify-between space-x-2.5 border rounded-full hover:shadow-lg">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Filtros -->
+    <header class="w-full px-72 pb-4 border-b-2 text-sm">
+        <div class="flex border rounded-full border-stone-300 shadow-lg divide-x">
+            <div class="px-8 py-2 w-4/12 cursor-pointer rounded-full hover:bg-stone-100">
+                <label for="" class="block font-bold cursor-pointer hover:border-rounded">Destinos</label>
+                <input type="text" class="outline-none cursor-pointer hover:bg-stone-100" placeholder="Buscar destinos">
+            </div>
+            <div class="px-8 py-2 w-2/12 cursor-pointer rounded-full hover:bg-stone-100">
+                <label for="" class="block font-bold cursor-pointer">Llegada</label>
+                <input type="date" class="outline-none cursor-pointer hover:bg-stone-100" placeholder="Agregar fecha">
+            </div>
+            <div class="px-8 py-2 w-2/12 cursor-pointer rounded-full hover:bg-stone-100">
+                <label for="" class="block font-bold cursor-pointer">Salida</label>
+                <input type="date" class="outline-none cursor-pointer hover:bg-stone-100" placeholder="Agregar fecha">
+            </div>
+            <div class="px-8 py-2 flex w-4/12 cursor-pointer rounded-full hover:bg-stone-100">
+                <div class="w-4/6">
+                    <label for="" class="block font-bold w-full cursor-pointer">Huespedes</label>
+                    <input type="text" class="outline-none cursor-pointer hover:bg-stone-100" placeholder="¿Cuantos?">
+                </div>
+                <div class="w-2/6 my-1">
+                    <button class="rounded-full bg-red-500 text-white px-3 py-2 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- menu de destinos -->
+    <section class="w-full flex px-10 py-4">
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-tree"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Parques</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Casas de campo</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-person-swimming"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Surf</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+             <i class="fa-solid fa-chess-rook w-full text-l"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Mansiones</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-wind"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Molinos de viento</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-house-fire"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Cabañas</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-water"></i>
+            <small class="w-full text-center py-4 font-bold" for="">En el lago</small>
+        </div>
+        <div class="flex flex-wrap justify-center w-[10%] text-stone-500 hover:text-black cursor-pointer">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <small class="w-full text-center py-4 font-bold" for="">Frente a la playa</small>
+        </div>
+        <button class="border rounded-lg border-stone-500 px-4 mx-4 flex items-center space-x-2.5">
+            <i class="fa-solid fa-sliders"></i><p class="font-bold">filtros</p>
+        </button>
+        <div class="border rounded-lg border-stone-500 px-4 mx-4 flex items-center space-x-2.5 cursor-pointer">
+            <p class="font-bold">Impuestos</p>
+            <i class="fa-solid fa-toggle-off w-full text-l"></i>
+        </div>
+    </section>
+    <!-- destinos -->
+    <section class="w-full flex flex-wrap items-center justify-center px-12 sm:p-2 md:p-6 lg:p-0">
+        <div class="w-full mx-2 relative md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino4.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative  md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino2.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative  md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino3.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino5.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+    </section>
+    
+    <section class="w-full flex flex-wrap items-center justify-center px-12 sm:p-2 md:p-6 lg:p-0">
+        <div class="mx-2 relative w-full md:w-[50%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino5.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino4.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino8.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino7.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+    </section>
+
+    <section class="w-full flex flex-wrap items-center justify-center px-12 sm:p-2 md:p-6 lg:p-0">
+        <div class="w-full mx-2 relative md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino4.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative  md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino2.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative  md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino3.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="w-full mx-2 relative md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino5.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+    </section>
+
+    <section class="w-full flex flex-wrap items-center justify-center px-12 mb-12 sm:p-2 md:p-6 lg:p-0">
+        <div class="mx-2 relative w-full md:w-[50%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino5.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino4.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino8.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="mx-2 relative w-full md:w-[40%] lg:w-[20%]">
+            <i class="fa-regular fa-heart absolute right-0 text-white text-2xl hover:text-red-500"></i>
+            <img src="img/destino7.jpg" alt="imagen de referencia" class="rounded-lg">
+            <div class="flex items-center justify-between">
+                <h3 class="font-semibold">Italia, Porto</h3>
+                <span><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <p class="text-stone-600">lugar vacacional para desfritar en pareja</p>
+            <small class="font-bold text-md">$150.00 <span class="font-normal">noche</span></small>
+        </div>
+        <div class="text-center"><br>
+            <p>Sigue descubriendo la categoría alojamientos en parques nacionales</p><br>
+            <button class="bg-black text-white px-8 py-4 text-lg rounded-full items-center text-center">Mostrar más</button>
+        </div>
+    </section>
+    <!-- boton footer -->
+    <!-- <div class="fixed bottom-4 right-0 left-0 text-center pb-12">
+        <button class="bg-black text-white px-8 py-4 text-lg rounded-full">Ver en el mapa<i class="fa-solid fa-map"></i></button>
+    </div> -->
+    <!-- footer -->
+    <div class="w-full pt-12 bg-red-50">
+        <!-- primer footer -->
+        <span class="font-semibold text-2xl mx-16">Inspiracion para futuras escapadas</span>
+        <div>
+            <nav class="mx-12 border-b-4 border-slate-200">
+                <ul class="flex justify-start space-x-5">
+                    <li><button class="p-3 focus:font-bold">Populares</button></li>
+                    <li><button class="p-3 focus:font-bold">Arte y cultura</button></li>
+                    <li><button class="p-3 focus:font-bold">Al aire libre</button></li>
+                    <li><button class="p-3 focus:font-bold">Montañas</button></li>
+                    <li><button class="p-3 focus:font-bold">Playa</button></li>
+                    <li><button class="p-3 focus:font-bold">Categorias</button></li>
+                    <li><button class="p-3 focus:font-bold">Qué hacer</button></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- segundo footer -->
+        <div class="flex flex-wrap pt-6 pb-6 mx-12 mb-6 border-b-4 items-center justify-between">
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Canmore</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold ">Tucson</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold ">Anaheim</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold ">Anaheim</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold ">Anaheim</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold ">Anaheim</span>
+                <p class="font-thin">Condominios</p>
+            </div>
+            <div class="w-2/12 cursor-pointer py-2">
+                <span class="w-2/12 font-semibold hover:underline">Mostrar más</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        <!-- tercer footer -->
+        <div class="flex flex-wrap border-b-4 mx-12 items-center justify-start">
+            <nav class="w-[30%] flex flex-wrap">
+                <ul class=" my-2">
+                    <li class="font-bold">Asistencia</li>
+                    <li><a href="#" class="font-thin hover:underline">Centro de Ayuda</a></li>
+                    <li><a href="#" class="font-thin hover:underline">AirCover</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Antidiscriminación</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Apoyo para discapacitados</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Opciones de cancelación</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Problemas en la zona</a></li>
+                </ul>
+            </nav>
+            <nav class="w-[30%] flex flex-wrap">
+                <ul class=" my-4">
+                    <li class="font-bold">Como ser anfitrión</li>
+                    <li><a href="#" class="font-thin hover:underline">Hazlo Airbnb</a></li>
+                    <li><a href="#" class="font-thin hover:underline">AirCover para anfitriones</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Recursos para hospedar</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Foro de la comunidad</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Ser un anfitrión responsable</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Apúntate a una clase gratuita sobre cómo ser anfitrión</a></li>
+                </ul>
+            </nav>
+            <nav class="w-[30%] flex flex-wrap">
+                <ul class=" my-4">
+                    <li class="font-bold">Airbnb</li>
+                    <li><a href="#" class="font-thin hover:underline">Sala de prensa</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Funciones nuevas</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Empleo</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Inversores</a></li>
+                    <li><a href="#" class="font-thin hover:underline">Alojamientos Airbnb.org</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- cuarto footer -->
+        <div class="w-full flex px-16 py-5 text-sm items-center justify-center">
+            <nav class="w-3/6 items-center justify-start">
+                <ul class="flex justify-start space-x-5">
+                    <li>© 2024 Airbnb, Inc.</li>
+                    <li class="hover:underline cursor-pointer">Privacidad</li>
+                    <li class="hover:underline cursor-pointer">Terminos</li>
+                    <li class="hover:underline cursor-pointer">Mapa del sitio</li>
+                </ul>
+            </nav>
+            <div class="w-3/6 flex items-center justify-end space-x-2.5">
+                <i class="fa-solid fa-globe border rounded-full border-0 hover:bg-stone-100 px-3 py-3 cursor-pointer"></i>
+                <a href="#" class="font-bold border rounded-full border-0 hover:bg-stone-100 px-3 py-3 hover:underline">Español</a>
+                <a href="#" class="font-bold border rounded-full border-0 hover:bg-stone-100 px-3 py-3 hover:underline">$ USD</a>
+                <i class="fa-brands fa-square-facebook cursor-pointer"></i>
+                <i class="fa-brands fa-square-twitter cursor-pointer"></i>
+                <i class="fa-brands fa-square-instagram cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+
+<script src="js/fontawesome-free-6.5.1-web/js/all.min.js"></script>
+</body>
+</html>
